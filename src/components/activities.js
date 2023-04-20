@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 const fetchAllActivities = async () => {
     try {
-        const response = await fetch(`https://fitness-dzmc.onrender.com/api/activities`);
+        const response = await fetch(`https://fitnesstrac-kr.herokuapp.com/api/activities`);
         const result = await response.json();
         if (result.error) {
             throw result.error;

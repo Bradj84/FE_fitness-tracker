@@ -3,7 +3,7 @@ import { addNewUser, userLogin } from './Fetch'
 
 async function loginUser(credentials) {
   console.log(credentials)
-  return fetch('https://fitness-dzmc.onrender.com/api/users/login', {
+  return fetch('https://fitnesstrac-kr.herokuapp.com/api/users/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 const fetchAllRoutines = async ( username, token ) => {
     try {
-        const response = await fetch(`https://fitness-dzmc.onrender.com/api/users/${username}/allroutines`, {
+        const response = await fetch(`https://fitnesstrac-kr.herokuapp.com/api/users/${username}/routines`, {
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token}`
@@ -21,7 +21,7 @@ const fetchAllRoutines = async ( username, token ) => {
 
 const fetchAllActivities = async () => {
   try {
-      const response = await fetch(`https://fitness-dzmc.onrender.com/api/activities`);
+      const response = await fetch(`https://fitnesstrac-kr.herokuapp.com/api/activities`);
       const result = await response.json();
       if (result.error) {
           throw result.error;
@@ -35,7 +35,7 @@ const fetchAllActivities = async () => {
 
 const attachActivity = async ( routineId, obj ) => {
   try {
-      const response = await fetch(`https://fitness-dzmc.onrender.com/api/routines/${routineId}/activities`, {
+      const response = await fetch(`https://fitnesstrac-kr.herokuapp.com/api/routines/${routineId}/activities`, {
         method: "POST",
         headers: {
         'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ const attachActivity = async ( routineId, obj ) => {
 
 const deleteRoutine = async ( routineId, token ) => {
   try {
-      const response = await fetch(`https://fitness-dzmc.onrender.com/api/routines/${routineId}`, {
+      const response = await fetch(`https://fitnesstrac-kr.herokuapp.com/api/routines/${routineId}`, {
         method: "DELETE",
         headers: {
         'Content-Type': 'application/json',
@@ -73,7 +73,7 @@ const deleteRoutine = async ( routineId, token ) => {
 
 const updateRoutine = async ( routineId, obj, token ) => {
   try {
-      const response = await fetch(`https://fitness-dzmc.onrender.com/api/routines/${routineId}`, {
+      const response = await fetch(`https://fitnesstrac-kr.herokuapp.com/api/routines/${routineId}`, {
         method: "PATCH",
         headers: {
           'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ const updateRoutine = async ( routineId, obj, token ) => {
 
 const updateRoutineActivity = async ( routineActivityId, obj, token ) => {
   try {
-      const response = await fetch(`https://fitness-dzmc.onrender.com/api/routine_activities/${routineActivityId}`, {
+      const response = await fetch(`https://fitnesstrac-kr.herokuapp.com/api/routine_activities/${routineActivityId}`, {
         method: "PATCH",
         headers: {
           'Content-Type': 'application/json',
@@ -113,7 +113,7 @@ const updateRoutineActivity = async ( routineActivityId, obj, token ) => {
 
 const deleteActFromRout = async ( routineActivityId, token ) => {
   try {
-      const response = await fetch(`https://fitness-dzmc.onrender.com/api/routine_activities/${routineActivityId}`, {
+      const response = await fetch(`https://fitnesstrac-kr.herokuapp.com/api/routine_activities/${routineActivityId}`, {
         method: "DELETE",
         headers: {
         'Content-Type': 'application/json',

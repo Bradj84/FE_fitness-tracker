@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 async function addNewRoutine(postObj, userToken) {
     
-    return fetch('https://fitness-dzmc.onrender.com/api/routines', {
+    return fetch('https://fitnesstrac-kr.herokuapp.com/api/routines', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
